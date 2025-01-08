@@ -1,0 +1,3 @@
+inicializar o front: npm run dev
+inicializar build pela primeira: npm run build;
+inicializar electron: npm run electron;
