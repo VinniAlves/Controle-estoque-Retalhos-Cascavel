@@ -1,8 +1,9 @@
 import React from "react"
+import { Button } from "@/components/ui/button"
 
 function CadastroPecas(){
     return(
-        <h1>OPA DEU BOA</h1>
+        <Button className="">Click me</Button>
     )
 }
 export default CadastroPecas
