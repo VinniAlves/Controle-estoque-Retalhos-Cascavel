@@ -7,18 +7,37 @@ async function getData(): Promise<Payment[]> {
     // Fetch data from your API here.
     return [
       {
-        id: "728ed52f",
-        amount: 100,
-        status: "pending",
-        email: "m@example.com",
-      }
+        codPeca: 1345,
+        peca: "Coluna A C/ Coluna de Parabrisa",
+        descricao: "Quadro de Porta LE Hyundai HB20 SEDAN",
+        marca: "Hyundai",
+        veiculo: "HB20",
+        modelo: "Sedan",
+        ano: 2020,
+        statusAnuncio: "Com Anúncio"
+      },
+      {
+        codPeca: 4576,
+        peca: "Coluna A C/ Coluna de Parabrisa",
+        descricao: "Quadro de Porta LE Hyundai HB20 SEDAN",
+        marca: "Hyundai",
+        veiculo: "HB20",
+        modelo: "Sedan",
+        ano: 2020,
+        statusAnuncio: "Sem Anúncio"
+      },{
+        codPeca: 113345,
+        peca: "Coluna A C/ Coluna de Parabrisa",
+        descricao: "Quadro de Porta LE Hyundai HB20 SEDAN",
+        marca: "Hyundai",
+        veiculo: "HB20",
+        modelo: "Sedan",
+        ano: 2020,
+        statusAnuncio: "Vendido"
+      },
     ]
   }
 
-
-
-// export default async function Listagem(): Promise<React.JSX.Element>{
-//     const data = await getData()
 
     export default function Listagem(){
         const [data, setData] = useState<Payment[]>([]);
@@ -43,7 +62,7 @@ async function getData(): Promise<Payment[]> {
 
             
         <div className="container mx-auto py-10">
-            {/* <DataTable columns={columns} data={data} /> */}
+           
             {loading ? <p>Carregando...</p> : <DataTable columns={columns} data={data} />}
         </div>
 
