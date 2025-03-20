@@ -14,7 +14,16 @@ async function getData(): Promise<Payment[]> {
         veiculo: "HB20",
         modelo: "Sedan",
         ano: 2020,
-        statusAnuncio: "Com Anúncio"
+        statusAnuncio: "Com Anúncio",
+        codFabricante:"231a-41ga-3141",
+        valor: 2500.56,
+        peso: 15.67,
+        altura: 1.61,
+        comprimento: 80,
+        largura: 40,
+        localizacao: "A17",
+        linkML: "www.mercadolivre.com.br"
+
       },
       {
         codPeca: 4576,
@@ -24,7 +33,15 @@ async function getData(): Promise<Payment[]> {
         veiculo: "HB20",
         modelo: "Sedan",
         ano: 2020,
-        statusAnuncio: "Sem Anúncio"
+        statusAnuncio: "Sem Anúncio",
+        codFabricante:"231a-41ga-3141",
+        valor: 2500.56,
+        peso: 15.67,
+        altura: 1.61,
+        comprimento: 80,
+        largura: 40,
+        localizacao: "A17",
+        linkML: "www.mercadolivre.com.br"
       },{
         codPeca: 113345,
         peca: "Coluna A C/ Coluna de Parabrisa",
@@ -33,7 +50,15 @@ async function getData(): Promise<Payment[]> {
         veiculo: "HB20",
         modelo: "Sedan",
         ano: 2020,
-        statusAnuncio: "Vendido"
+        statusAnuncio: "Vendido",
+        codFabricante:"231a-41ga-3141",
+        valor: 2500.56,
+        peso: 15.67,
+        altura: 1.61,
+        comprimento: 80,
+        largura: 40,
+        localizacao: "A17",
+        linkML: "www.mercadolivre.com.br"
       },
     ]
   }

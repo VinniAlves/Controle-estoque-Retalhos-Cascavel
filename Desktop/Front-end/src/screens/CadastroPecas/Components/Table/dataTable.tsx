@@ -57,40 +57,30 @@ export function DataTable<TData, TValue>({
           ))}
         </TableHeader>
         <TableBody>
-          {table.getRowModel().rows?.length ? (
-            table.getRowModel().rows.map((row) => (
-              <TableRow
-                key={row.id}
-                data-state={row.getIsSelected() && "selected"}
-              >
-                 <div className="flex">
-                      <Button variant="outline" size="icon">
-                        <ChevronRight />
-                        {/* <ChevronDown /> */}
-                      </Button>
-                      <Button variant="outline" size="icon">
-                        <Pencil/>
-                      </Button>
-                      <Button variant="outline" size="icon">
-                        <Trash2 />
-                      </Button>
-                      <Button variant="outline" size="icon">
-                      <BadgeDollarSign />
-                      </Button>
-                 </div>
-                  
-
-
-
-                {row.getVisibleCells().map((cell) => (
-                  
-                  <TableCell key={cell.id}>
                     
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </TableCell>
-                ))}
-              </TableRow>
-            ))
+          {table.getRowModel().rows?.length ? (
+
+           
+              
+            table.getRowModel().rows.map((row) => (
+              
+             
+              <div> 
+              
+            
+                
+                
+                  <TableRow  key={row.id} data-state={row.getIsSelected() && "selected"}> 
+                    {row.getVisibleCells().map((cell) => (
+                      <TableCell key={cell.id}>
+                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                      </TableCell>
+                    ))}
+                  </TableRow>
+              </div>
+            )
+            
+            )
           ) : (
             <TableRow>
               <TableCell colSpan={columns.length} className="h-24 text-center">
@@ -98,6 +88,7 @@ export function DataTable<TData, TValue>({
               </TableCell>
             </TableRow>
           )}
+
         </TableBody>
       </Table>
      
