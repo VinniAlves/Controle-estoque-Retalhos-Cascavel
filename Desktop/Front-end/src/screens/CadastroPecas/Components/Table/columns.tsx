@@ -3,6 +3,7 @@
 import { ColumnDef } from "@tanstack/react-table"
 import { Button } from "@/components/ui/button"
 import { BadgeDollarSign, ChevronDown, ChevronRight,Pencil,Trash2 } from "lucide-react"
+import iconMercado from "./image/mercado-libre.svg"
 
 import React, { useState } from "react"
 // This type is used to define the shape of our data.
@@ -27,40 +28,12 @@ export type Payment = {
 }
 
 
-const  modalMaisInformações= () => {
-  const [maisDados,setMaisDados] = useState<boolean> (true);
-
-    if (maisDados) {
-        setMaisDados(false)
-    }else{
-      setMaisDados(true)
-    }
-    
-}
 
 
 
 export const columns: ColumnDef<Payment>[] = [
 
   
-  {
-    id: "moreInfo",
-    cell: ({ row }) => {
-      const payment = row.original
-      return (
-        <Button onClick={modalMaisInformações} className="border-none shadow-none" variant="outline" size="icon" >
-          
-          
-              {maisDados ?
-              
-                <ChevronRight />:
-                  <ChevronDown />
-              }
-          
-        </Button>
-      )
-    },
-  },
   {
     id: "editInfo",
     cell: ({ row }) => {
@@ -94,18 +67,17 @@ export const columns: ColumnDef<Payment>[] = [
       )
     },
   },
- 
   {
     accessorKey: "codPeca",
-    header: "CodPeca",
+    header: "Cod. Peça",
   },
   {
     accessorKey: "peca",
-    header: "Peca",
+    header: "Peça",
   },
   {
     accessorKey: "descricao",
-    header: "Descricao",
+    header: "Descrição",
   },
   {
     accessorKey: "marca",
@@ -113,7 +85,7 @@ export const columns: ColumnDef<Payment>[] = [
   },
   {
     accessorKey: "veiculo",
-    header: "Veiculo",
+    header: "Veículo",
   },
   {
     accessorKey: "modelo",
@@ -125,8 +97,52 @@ export const columns: ColumnDef<Payment>[] = [
   },
   {
     accessorKey: "statusAnuncio",
-    header: "StatusAnuncio",
+    header: "Status Anúncio",
   },
+  {
+    accessorKey: "codFabricante",
+    header: "Cod. Fabricante",
+  },
+  {
+    accessorKey: "valor",
+    header: "Valor",
+  },
+  {
+    accessorKey: "peso",
+    header: "Peso",
+  },
+  {
+    accessorKey: "altura",
+    header: "Altura",
+  },
+  {
+    accessorKey: "comprimento",
+    header: "Comprimento",
+  },
+  {
+    accessorKey: "largura",
+    header: "Largura",
+  },
+  {
+    accessorKey: "localizacao",
+    header: "Localização",
+  },
+  {
+    header: "Link Mercado",
+    id: "editInfo",
+    cell: ({ row }) => {
+      const payment = row.original
+      return (
+        <Button   className="border-none shadow-none" variant="outline" size="icon">
+          <img src={iconMercado}></img>
+        </Button>
+      )
+    },
+  },
+  
+
+
+  
  
   
 ]

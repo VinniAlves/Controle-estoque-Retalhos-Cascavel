@@ -16,6 +16,13 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
 import { BadgeDollarSign, ChevronDown, ChevronRight,Pencil,Trash2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -56,31 +63,34 @@ export function DataTable<TData, TValue>({
             </TableRow>
           ))}
         </TableHeader>
+        
         <TableBody>
-                    
+
           {table.getRowModel().rows?.length ? (
 
-           
-              
+
             table.getRowModel().rows.map((row) => (
               
-             
-              <div> 
               
-            
-                
-                
                   <TableRow  key={row.id} data-state={row.getIsSelected() && "selected"}> 
-                    {row.getVisibleCells().map((cell) => (
-                      <TableCell key={cell.id}>
-                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                      </TableCell>
-                    ))}
+
+                      {row.getVisibleCells().map((cell) => (
+                        
+
+                          <TableCell key={cell.id} className="pl-[10px] pr-[10px]">
+                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                            </TableCell>
+                      )
+                      )}
+
                   </TableRow>
-              </div>
+                  
+                
+                  
             )
             
             )
+            
           ) : (
             <TableRow>
               <TableCell colSpan={columns.length} className="h-24 text-center">
@@ -88,7 +98,6 @@ export function DataTable<TData, TValue>({
               </TableCell>
             </TableRow>
           )}
-
         </TableBody>
       </Table>
      
