@@ -45,6 +45,47 @@
           "valor": "R$ 970,00",
           "link": "",
           "foto": ""
+        },{
+          "titulo_produto": "Capo Audi A4",
+          "descricao_produto": "Capo de Audi A4 2011, novo sem marcas Capo de Audi A4 2011,novo sem marcas Capo de Audi A4 2011, novo sem marcas Capo de Audi A4 2011,novo sem marcas Capo de Audi A4 2011, novo sem marcas ",
+          "valor": "R$ 1.234,00",
+          "link": "",
+          "foto": ""
+        },
+        {
+          "titulo_produto": "Porta Volkswagen Golf",
+          "descricao_produto": "Porta dianteira do Golf 2015, seminova",
+          "valor": "R$ 950,00",
+          "link": "",
+          "foto": ""
+        },
+        {
+          "titulo_produto": "Capo BMW Série 3",
+          "descricao_produto": "Capo original BMW 320i 2012 com leve retoque",
+          "valor": "R$ 1.780,00",
+          "link": "",
+          "foto": ""
+        },
+        {
+          "titulo_produto": "Porta Fiat Uno",
+          "descricao_produto": "Porta traseira lado direito para Uno 2010",
+          "valor": "R$ 540,00",
+          "link": "",
+          "foto": ""
+        },
+        {
+          "titulo_produto": "Capo Chevrolet Onix",
+          "descricao_produto": "Capo do Onix 2018, novo e com pintura preta",
+          "valor": "R$ 1.120,00",
+          "link": "",
+          "foto": ""
+        },
+        {
+          "titulo_produto": "Porta Hyundai HB20",
+          "descricao_produto": "Porta dianteira HB20 com vidro elétrico incluso",
+          "valor": "R$ 970,00",
+          "link": "",
+          "foto": ""
         }
       ]
     },

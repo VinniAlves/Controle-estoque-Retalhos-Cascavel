@@ -29,7 +29,7 @@ function CategoriaSection({ categoria }: { categoria: Categoria }) {
 
   const scroll = (direction: 'left' | 'right') => {
     if (containerRef.current) {
-      const cardWidth = 200;
+      const cardWidth = 300;
       const gap = 16; 
       const visibleCount = 5;
 
@@ -44,10 +44,14 @@ function CategoriaSection({ categoria }: { categoria: Categoria }) {
 
   return (
     <section className="w-full flex flex-col items-center py-8">
-      <h2 className="text-xl font-semibold">{categoria.titulo_categoria}</h2>
-      <p className="text-gray-500 mb-4">{categoria.subTitulo_categoria}</p>
+      <div className='w-full  flex flex-col max-w-[1618px]'>
+        <h2 className="  text-xl font-semibold">{categoria.titulo_categoria}</h2>
+        <p className="text-gray-500 ">{categoria.subTitulo_categoria}</p>
+        <span className='h-[2px] w-[60px] bg-base-color mb-4'></span>
+      </div>
+      
 
-      <div className="relative w-full max-w-7xl px-6">
+      <div className="relative w-full max-w-[1618px] px-6">
 
         <button
           onClick={() => scroll('left')}
@@ -58,7 +62,7 @@ function CategoriaSection({ categoria }: { categoria: Categoria }) {
 
         <div
           ref={containerRef}
-          className="flex gap-4 overflow-x-auto px-[calc((100%-1040px)/2)] scroll-smooth no-scrollbar"
+          className="flex gap-4 overflow-x-auto px-[0px] scroll-smooth no-scrollbar"
           style={{
             scrollSnapType: 'x mandatory',
             WebkitOverflowScrolling: 'touch',
@@ -96,7 +100,7 @@ function ProdutoCard({ produto }: { produto: Produto }) {
       </div>
       <h3 className="font-semibold">{produto.titulo_produto}</h3>
       <p className="text-gray-500 text-xs mb-1 line-clamp-4 h-[68px]">{produto.descricao_produto}</p>
-      <p className="font-bold">{produto.valor}</p>
+      <p className="font-bold text-green-500">{produto.valor}</p>
     </div>
   );
 }
