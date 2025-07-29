@@ -1,0 +1,50 @@
+{
+  "tipo": [
+    {
+      "nome": "Capo",
+      "marcas": ["Audi", "BMW", "Chevrolet", "Fiat", "Ford", "Hyundai", "Jeep", "Mercedes-Benz", "Toyota", "Volkswagen"],
+      "capa": "../src/mocks/image/capo.png"
+    },
+    {
+      "nome": "Lateral",
+      "marcas": ["Audi", "BMW", "Chevrolet", "Fiat", "Land Rover", "Peugeot", "Renault", "Volkswagen", "Volvo"],
+      "capa": "../src/mocks/image/Lateral.png"
+    },
+    {
+      "nome": "Painel Dianteiro",
+      "marcas": ["Audi", "BMW", "Chevrolet", "Fiat", "Ford", "Hyundai", "Mercedes-Benz", "Toyota", "Volkswagen"],
+      "capa": "../src/mocks/image/painel dianteiro.png"
+    },
+    {
+      "nome": "Painel Traseiro",
+      "marcas": ["BMW", "Chevrolet", "Fiat", "Ford", "Jeep", "Toyota", "Volkswagen", "Volvo"],
+      "capa": "../src/mocks/image/painel traseiro.png"
+    },
+    {
+      "nome": "Parachoque",
+      "marcas": ["Audi", "BMW", "Chevrolet", "Fiat", "Hyundai", "Mercedes-Benz", "Renault", "Volkswagen"],
+      "capa": "../src/mocks/image/parachoque.png"
+    },
+    {
+      "nome": "Paralama",
+      "marcas": ["Audi", "BMW", "Chevrolet", "Fiat", "Ford", "Jeep", "Toyota", "Volkswagen"],
+      "capa": "../src/mocks/image/paralamas.png"
+    },
+    {
+      "nome": "Porta",
+      "marcas": ["BMW", "Chevrolet", "Fiat", "Land Rover", "Mercedes-Benz", "Renault", "Volkswagen", "Volvo"],
+      "capa": "../src/mocks/image/porta.png"
+    },
+    {
+      "nome": "Tampa Traseira",
+      "marcas": ["Audi", "BMW", "Chevrolet", "Fiat", "Ford", "Jeep", "Peugeot", "Volkswagen"],
+      "capa": "../src/mocks/image/tampa traseira.png"
+    },
+    {
+      "nome": "Outros",
+      "marcas": ["Audi", "BMW", "Chevrolet", "Fiat", "Ford", "Jeep", "Peugeot", "Volkswagen"],
+      "capa": ""
+    }
+  ]
+}
+

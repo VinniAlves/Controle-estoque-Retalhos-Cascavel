@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+* {
+  font-family: "Roboto", sans-serif;
+  
+}
+
+@theme{
+  --color-base-color: rgb(248, 57, 74);
+}
+
+@custom-variant hover (&:hover);
