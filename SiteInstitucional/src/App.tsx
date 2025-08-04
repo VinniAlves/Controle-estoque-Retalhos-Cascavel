@@ -1,19 +1,22 @@
 import './App.css'
 import useRoutes from './routes'
-import { BrowserRouter, Route,Routes } from 'react-router-dom'
+import {  Route,Routes } from 'react-router-dom'
 function App() {
     const routes = useRoutes();
 
   return (
-      <BrowserRouter>
+
         <Routes>
-          {
-            routes.map((route,index)=>(
-              <Route key={index} path={route.path} element={route.element}/>
+          {       
+            routes.map((route,index)=>(          
+                <Route key={index} path={route.path} element={route.element}>  
+                </Route>
+              
             ))
+           
           }
-        </Routes>
-      </BrowserRouter>
+      </Routes>
+
      
   )
 }

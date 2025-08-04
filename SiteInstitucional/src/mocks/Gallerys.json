@@ -9,83 +9,109 @@
           "descricao_produto": "Capo de Audi A4 2011, novo sem marcas Capo de Audi A4 2011,novo sem marcas Capo de Audi A4 2011, novo sem marcas Capo de Audi A4 2011,novo sem marcas Capo de Audi A4 2011, novo sem marcas ",
           "valor": "R$ 1.234,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "codigo": "45451 Aut:341431",
+          "marca": "Audi"
         },
         {
           "titulo_produto": "Porta Volkswagen Golf",
           "descricao_produto": "Porta dianteira do Golf 2015, seminova",
           "valor": "R$ 950,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Volkswagen"
         },
         {
           "titulo_produto": "Capo BMW Série 3",
           "descricao_produto": "Capo original BMW 320i 2012 com leve retoque",
           "valor": "R$ 1.780,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "BMW"
         },
         {
           "titulo_produto": "Porta Fiat Uno",
           "descricao_produto": "Porta traseira lado direito para Uno 2010",
           "valor": "R$ 540,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Fiat"
         },
         {
           "titulo_produto": "Capo Chevrolet Onix",
           "descricao_produto": "Capo do Onix 2018, novo e com pintura preta",
           "valor": "R$ 1.120,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Chevrolet"
         },
         {
           "titulo_produto": "Porta Hyundai HB20",
           "descricao_produto": "Porta dianteira HB20 com vidro elétrico incluso",
           "valor": "R$ 970,00",
           "link": "",
-          "foto": ""
-        },{
+          "foto": "",
+          "unidade": 1,
+          "marca": "Hyundai"
+        },
+        {
           "titulo_produto": "Capo Audi A4",
           "descricao_produto": "Capo de Audi A4 2011, novo sem marcas Capo de Audi A4 2011,novo sem marcas Capo de Audi A4 2011, novo sem marcas Capo de Audi A4 2011,novo sem marcas Capo de Audi A4 2011, novo sem marcas ",
           "valor": "R$ 1.234,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Audi"
         },
         {
           "titulo_produto": "Porta Volkswagen Golf",
           "descricao_produto": "Porta dianteira do Golf 2015, seminova",
           "valor": "R$ 950,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Volkswagen"
         },
         {
           "titulo_produto": "Capo BMW Série 3",
           "descricao_produto": "Capo original BMW 320i 2012 com leve retoque",
           "valor": "R$ 1.780,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "BMW"
         },
         {
           "titulo_produto": "Porta Fiat Uno",
           "descricao_produto": "Porta traseira lado direito para Uno 2010",
           "valor": "R$ 540,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Fiat"
         },
         {
           "titulo_produto": "Capo Chevrolet Onix",
           "descricao_produto": "Capo do Onix 2018, novo e com pintura preta",
           "valor": "R$ 1.120,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Chevrolet"
         },
         {
           "titulo_produto": "Porta Hyundai HB20",
           "descricao_produto": "Porta dianteira HB20 com vidro elétrico incluso",
           "valor": "R$ 970,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Hyundai"
         }
       ]
     },
@@ -98,42 +124,54 @@
           "descricao_produto": "Lateral original do Renegade 2020",
           "valor": "R$ 890,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Jeep"
         },
         {
           "titulo_produto": "Lateral Esquerda Toyota Corolla",
           "descricao_produto": "Peça seminova do Corolla 2018",
           "valor": "R$ 980,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Toyota"
         },
         {
           "titulo_produto": "Lateral Traseira Peugeot 208",
           "descricao_produto": "Peça estrutural lateral do 208 2016",
           "valor": "R$ 730,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Peugeot"
         },
         {
           "titulo_produto": "Lateral Dianteira Fiat Argo",
           "descricao_produto": "Lateral do Argo 2019, pronta para pintura",
           "valor": "R$ 790,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Fiat"
         },
         {
           "titulo_produto": "Lateral Honda Civic",
           "descricao_produto": "Lateral do Civic 2015 com pequenos arranhões",
           "valor": "R$ 1.050,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Honda"
         },
         {
           "titulo_produto": "Lateral Volkswagen Voyage",
           "descricao_produto": "Lateral lateral original com pintura cinza",
           "valor": "R$ 660,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Volkswagen"
         }
       ]
     },
@@ -146,42 +184,49 @@
           "descricao_produto": "Estrutura frontal original do Ka 2019",
           "valor": "R$ 1.190,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "unidade": 1,
+          "marca": "Ford"
         },
         {
           "titulo_produto": "Painel Traseiro Chevrolet Cruze",
           "descricao_produto": "Painel traseiro com furação de fábrica",
           "valor": "R$ 1.400,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "marca": "Chevrolet"
         },
         {
           "titulo_produto": "Painel Dianteiro Hyundai Creta",
           "descricao_produto": "Frente estrutural do Creta 2021 em perfeito estado",
           "valor": "R$ 1.650,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "marca": "Hyundai"
         },
         {
           "titulo_produto": "Painel Traseiro Fiat Toro",
           "descricao_produto": "Painel estrutural traseiro com reforços",
           "valor": "R$ 1.280,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "marca": "Fiat"
         },
         {
           "titulo_produto": "Painel Dianteiro Renault Logan",
           "descricao_produto": "Painel dianteiro compatível com Logan até 2018",
           "valor": "R$ 890,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "marca": "Renault"
         },
         {
           "titulo_produto": "Painel Traseiro VW Polo",
           "descricao_produto": "Painel traseiro original com solda de fábrica",
           "valor": "R$ 1.330,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "marca": "Volkswagen"
         }
       ]
     },
@@ -194,42 +239,48 @@
           "descricao_produto": "Porta traseira para Corsa Hatch 2008",
           "valor": "R$ 460,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "marca": "Chevrolet"
         },
         {
           "titulo_produto": "Porta Dianteira Nissan March",
           "descricao_produto": "Porta completa com maçaneta e vidro",
           "valor": "R$ 690,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "marca": "Nissan"
         },
         {
           "titulo_produto": "Porta Honda Fit",
           "descricao_produto": "Porta dianteira esquerda com risco leve",
           "valor": "R$ 780,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "marca": "Honda"
         },
         {
           "titulo_produto": "Porta Peugeot 206",
           "descricao_produto": "Porta usada, pronta para pintura",
           "valor": "R$ 430,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "marca": "Peugeot"
         },
         {
           "titulo_produto": "Porta Volkswagen Fox",
           "descricao_produto": "Porta lateral do Fox com trinco funcionando",
           "valor": "R$ 640,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "marca": "Volkswagen"
         },
         {
           "titulo_produto": "Porta Traseira Toyota Hilux",
           "descricao_produto": "Porta de cabine dupla com acabamento original",
           "valor": "R$ 1.150,00",
           "link": "",
-          "foto": ""
+          "foto": "",
+          "marca": "Toyota"
         }
       ]
     }

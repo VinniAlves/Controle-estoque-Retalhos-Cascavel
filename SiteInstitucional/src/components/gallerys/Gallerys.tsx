@@ -1,6 +1,8 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 type Produto = {
+  id: string; // ID gerado internamente
   titulo_produto: string;
   descricao_produto: string;
   valor: string;
@@ -9,30 +11,49 @@ type Produto = {
 };
 
 type Categoria = {
+  id:number;
   titulo_categoria: string;
   subTitulo_categoria: string;
   produtos: Produto[];
 };
 
 function Gallerys({ data }: { data: Categoria[] }) {
+  useEffect(() => {
+    const todosProdutos: Produto[] = [];
+
+    data.forEach((cat, catIdx) => {
+      cat.produtos.forEach((p, prodIdx) => {
+        const id = btoa(`${catIdx}-${prodIdx}-${p.titulo_produto}`).replace(/=/g, '');
+        todosProdutos.push({ ...p, id });
+      });
+    });
+
+    localStorage.setItem('galeria-produtos', JSON.stringify(todosProdutos));
+  }, [data]);
+
   return (
     <div className="space-y-10">
       {data.map((categoria, index) => (
-        <CategoriaSection key={index} categoria={categoria} />
+        <CategoriaSection key={index} categoria={categoria} catIndex={index} />
       ))}
     </div>
   );
 }
 
-function CategoriaSection({ categoria }: { categoria: Categoria }) {
+function CategoriaSection({
+  categoria,
+  catIndex,
+}: {
+  categoria: Categoria;
+  catIndex: number;
+}) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
     if (containerRef.current) {
       const cardWidth = 300;
-      const gap = 16; 
+      const gap = 16;
       const visibleCount = 5;
-
       const scrollAmount = (cardWidth + gap) * visibleCount;
 
       containerRef.current.scrollBy({
@@ -44,15 +65,13 @@ function CategoriaSection({ categoria }: { categoria: Categoria }) {
 
   return (
     <section className="w-full flex flex-col items-center py-8">
-      <div className='w-full  flex flex-col max-w-[1618px]'>
-        <h2 className="  text-xl font-semibold">{categoria.titulo_categoria}</h2>
-        <p className="text-gray-500 ">{categoria.subTitulo_categoria}</p>
-        <span className='h-[2px] w-[60px] bg-base-color mb-4'></span>
+      <div className="w-full flex flex-col max-w-[1618px]">
+        <h2 className="text-xl font-semibold">{categoria.titulo_categoria}</h2>
+        <p className="text-gray-500">{categoria.subTitulo_categoria}</p>
+        <span className="h-[2px] w-[60px] bg-base-color mb-4"></span>
       </div>
-      
 
       <div className="relative w-full max-w-[1618px] px-6">
-
         <button
           onClick={() => scroll('left')}
           className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow p-2 z-10 rounded-full"
@@ -62,21 +81,19 @@ function CategoriaSection({ categoria }: { categoria: Categoria }) {
 
         <div
           ref={containerRef}
-          className="flex gap-4 overflow-x-auto px-[0px] scroll-smooth no-scrollbar"
-          style={{
-            scrollSnapType: 'x mandatory',
-            WebkitOverflowScrolling: 'touch',
-            scrollbarWidth: 'none',
-          }}
+          className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar"
         >
           {categoria.produtos.map((produto, idx) => (
-            <div className="scroll-snap-start" key={idx}>
-              <ProdutoCard produto={produto} />
-            </div>
+            <ProdutoCard
+              key={idx}
+              produto={{
+                ...produto,
+                id: btoa(`${catIndex}-${idx}-${produto.titulo_produto}`).replace(/=/g, ''),
+              }}
+            />
           ))}
         </div>
 
-        {/* Botão direito */}
         <button
           onClick={() => scroll('right')}
           className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow p-2 z-10 rounded-full"
@@ -89,8 +106,21 @@ function CategoriaSection({ categoria }: { categoria: Categoria }) {
 }
 
 function ProdutoCard({ produto }: { produto: Produto }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (!produto.id) {
+      console.error('Produto sem id:', produto);
+      return;
+    }
+    navigate(`/detalhe/${produto.id}`);
+  };
+
   return (
-    <div className="w-[300px] h-[400px] flex-shrink-0 border rounded shadow-sm bg-white p-2 flex flex-col gap-[20px] text-sm scroll-snap-start">
+    <div
+      onClick={handleClick}
+      className="cursor-pointer w-[300px] h-[400px] flex-shrink-0 border rounded shadow-sm bg-white p-2 flex flex-col gap-[20px] text-sm hover:shadow-md transition"
+    >
       <div className="w-full h-[200px] bg-gray-100 mb-2 flex items-center justify-center">
         {produto.foto ? (
           <img src={produto.foto} alt={produto.titulo_produto} className="h-full object-contain" />
@@ -105,6 +135,4 @@ function ProdutoCard({ produto }: { produto: Produto }) {
   );
 }
 
-
-
-export default Gallerys
+export default Gallerys;

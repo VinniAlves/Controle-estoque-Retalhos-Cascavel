@@ -4,7 +4,7 @@ import Logo from '../../assets/Retalhos_Cascavel_PNG-1.png'
 import { BiLogoWhatsapp,BiPhoneCall,BiSearchAlt } from "react-icons/bi";
 import HeadersDate from '../../mocks/Headers.json'
 import { useState } from 'react';
-
+import { useNavigate} from 'react-router-dom';
 
 
 function HeaderFilters(){
@@ -12,8 +12,12 @@ function HeaderFilters(){
     const dateCategory = HeadersDate
     
     const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const navigate = useNavigate();
 
+  const handleClick = () => {
 
+    navigate('/');
+  };
 
 
 return(
@@ -21,9 +25,12 @@ return(
     <div className=' flex flex-col gap-[30px] justify-center items-center m-[30px]  '>
            
         <div className='flex  '>
-            <div className=''>
+          
+            <div onClick={handleClick} className='cursor-pointer'>
                 <img className='max-w-3xs max-h-3xs' src={Logo}></img>
+
             </div>
+   
             <div className=' flex flex-col gap-[20px] mr-[100px] ml-[100px]'>
                 <div className='flex gap-[40px] text-sm'>
                     <div className='flex gap-[10px]'> 
@@ -71,12 +78,14 @@ return(
           {dateCategory.tipo
             .find((item) => item.nome === openMenu)
             ?.marcas.map((marca) => (
+              
               <li
-                key={marca}
-                className="hover:bg-gray-100 p-2 rounded cursor-pointer"
-              >
-                {marca}
-              </li>
+  key={marca}
+  className="hover:bg-gray-100 p-2 rounded cursor-pointer"
+  onClick={() => navigate(`/produtos/${openMenu}/${marca}`)}
+>
+  {marca}
+</li>
             ))}
         </ul>
       </div>

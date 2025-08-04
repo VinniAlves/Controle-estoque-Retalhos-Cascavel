@@ -1,5 +1,5 @@
 import Gallerys from "../../components/gallerys"
-import HeaderFilters from "../../components/headers"
+
 import GallerysDate from '../../mocks/Gallerys.json'
 
  function Home(){
@@ -7,7 +7,7 @@ import GallerysDate from '../../mocks/Gallerys.json'
 return(
     
         <div>
-            <HeaderFilters></HeaderFilters>
+
             <Gallerys data={GallerysDate.data}></Gallerys>
         </div>
 
