@@ -10,6 +10,7 @@ type Produto = {
   imagem?: string;
   unidade?: number;
   valor?: string;
+  link?:string;
 };
 
 export default function GalleryDetail() {
@@ -33,7 +34,7 @@ useEffect(() => {
         <img
           src={produto.imagem || '/placeholder.png'}
           alt={produto.titulo_produto}
-          className="w-full md:w-4xl h-110 object-contain rounded shadow"
+          className="w-full md:w-3xl h-110 object-contain rounded shadow"
         />
           <div className='text-[13px]'>
             <h1 className="text-[17px] font-bold mb-2">{produto.titulo_produto}</h1>
@@ -42,7 +43,7 @@ useEffect(() => {
               
               <p className=" text-gray-500">Marca: {produto.marca}</p>
           
-            <p className=" mt-4 text-gray-700 whitespace-pre-line">
+            <p className=" mt-4 text-gray-700 whitespace-pre-line md:w-[450px]">
               {produto.descricao_produto}
             </p>
             <p className="mt-4 text-gray-700 whitespace-pre-line">
@@ -50,7 +51,7 @@ useEffect(() => {
             </p>
           </div>
 
-        <div className="pt-6 flex flex-col gap-[15px] items-center  md:w-4xl h-38 object-contain rounded shadow">
+        <div className="pt-6 flex flex-col gap-[15px] items-center  md:w-2xl h-65 object-contain rounded shadow">
             <p className="mt-4 text-gray-700 whitespace-pre-line flex gap-[10px]">
               À vista no Pix por
               <span className='text-green-500 font-bold'>{produto.valor}</span>
@@ -65,6 +66,16 @@ useEffect(() => {
             >
               Entrar em contato pelo WhatsApp
             </a>
+            <p>OU</p>
+            <a
+              href={`${produto.link}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#fee608] text-white px-6 py-3 rounded shadow hover:bg-[#fff177] transition w-[288px] flex justify-center"
+            >
+              Disponivel em Marcado Livre
+            </a>
+
           </div>
       </div>
     </div>

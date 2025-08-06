@@ -74,14 +74,15 @@ function CategoriaSection({
       <div className="relative w-full max-w-[1618px] px-6">
         <button
           onClick={() => scroll('left')}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow p-2 z-10 rounded-full"
+          // className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow p-2 z-10 rounded-full"
+           className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#ffffffa8] shadow p-2 z-10 w-[39px] h-[41px] rounded-full cursor-pointer "
         >
           ❮
         </button>
 
         <div
           ref={containerRef}
-          className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar"
+          className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar "
         >
           {categoria.produtos.map((produto, idx) => (
             <ProdutoCard
@@ -96,7 +97,7 @@ function CategoriaSection({
 
         <button
           onClick={() => scroll('right')}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow p-2 z-10 rounded-full"
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#ffffffa8] shadow p-2 z-10 w-[39px] h-[41px] rounded-full cursor-pointer"
         >
           ❯
         </button>

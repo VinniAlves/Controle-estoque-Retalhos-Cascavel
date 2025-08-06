@@ -11,3 +11,7 @@
 }
 
 @custom-variant hover (&:hover);
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
