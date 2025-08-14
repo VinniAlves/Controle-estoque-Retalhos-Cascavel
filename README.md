@@ -51,7 +51,7 @@ A arquitetura do sistema será separada em **máquinas virtuais (VMs)** para mai
 ## 🎨 Design & Prototipagem
 
 - Protótipo inicial do desktop disponível no **Figma**  
-  *(Link privado — apenas para visualização do layout desejado)*
+🔗 [Acesso Prototipação](https://www.figma.com/proto/M1bulwxQ5rwFfmBaImIHDH/Sistema-Cascavel-Retelhos?node-id=1-4&p=f&t=XO9rjvPxfRB4GG12-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4&show-proto-sidebar=1)
 
 ---
 
