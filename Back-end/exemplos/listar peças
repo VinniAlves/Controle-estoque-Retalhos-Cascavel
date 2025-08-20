@@ -1,0 +1,6 @@
+Listar peças — GET /api/parts
+
+Query params (todos opcionais):
+page, pageSize, codigoPeca, codigoFabricante, marca, veiculo, ano, peca, descricao, statusId
+
+Exemplo: /api/parts?page=1&pageSize=20&marca=Bosch&veiculo=VW%20Gol&statusId=1

@@ -1,0 +1,11 @@
+Rota: /api/parts/:id
+
+exemplo corpo: (qualquer campo é aceito)
+{
+  "descricao": "Filtro de ar atualizado",
+  "valor": "79,90",
+  "linkMercado": "",
+  "imagensParaExcluir": [12, 13],
+  "imagensParaSubstituir": [{ "id": 14, "base64": "data:image/png;base64,..." }],
+  "imagensParaAdicionar": ["data:image/jpeg;base64,..."]
+}

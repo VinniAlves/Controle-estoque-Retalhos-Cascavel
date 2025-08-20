@@ -1,0 +1,35 @@
+rota: /api/parts
+
+{
+  "codigoPeca": "ABC-123",
+  "peca": "Filtro de Ar",
+  "descricao": "Filtro de ar para motor 1.6",
+  "marca": "Bosch",
+  "veiculo": "VW Gol",
+  "modelo": "G5",
+  "ano": 2013,
+  "codigoFabricante": "BOS-9988",
+  "valor": "89,90",
+  "peso": 0.3,
+  "altura": 10.2,
+  "comprimento": 25.0,
+  "largura": 15.0,
+  "localizacao": "Prateleira A3",
+  "linkMercado": "https://produto.mercadolivre.com.br/...",
+  "quantidade": 5,
+  "imagensBase64": ["data:image/png;base64,iVBORw0K...", "data:image/jpeg;base64,/9j/4AAQ..."]
+}
+---
+
+Buscar por ID — GET /api/parts/:id
+
+Retorna todos os campos + imagens (inclui Base64 para permitir edição).
+
+SQL essencial:
+
+select p.*, s.code, s.label,
+  (select json_agg(json_build_object('id',pi.id,'position',pi.position,'base64',pi.base64))
+     from estoque.part_images pi where pi.part_id = p.id) as imagens
+from estoque.parts p
+left join estoque.part_status s on s.id = p.status_id
+where p.id = $1 and p.deleted_at is null;

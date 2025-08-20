@@ -1,0 +1,7 @@
+Exclusão lógica — DELETE /api/parts/:id
+
+Marca deleted_at = now(); mantém referências históricas.
+
+SQL essencial:
+
+update estoque.parts set deleted_at = now() where id = $1 and deleted_at is null;
